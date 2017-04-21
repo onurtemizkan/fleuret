@@ -1,5 +1,6 @@
 parserOptions:
-    ecmaVersion: 6
+    ecmaVersion: 6,
+    sourceType: "module"
 env:
     node: true
     es6: true
@@ -64,7 +65,7 @@ rules:
     block-spacing: 2
     id-length:
         - 2
-        - exceptions: ["$", "_", "i", "j"]
+        - exceptions: ["$", "_", "i", "j", "x", "y"]
     no-irregular-whitespace: 2
     no-whitespace-before-property: 2
     template-curly-spacing: 2
