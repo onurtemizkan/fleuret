@@ -80,19 +80,6 @@
     "semi": 2,
     "semi-spacing": 2,
     "block-spacing": 2,
-    "id-length": [
-      2,
-      {
-        "exceptions": [
-          "$",
-          "_",
-          "i",
-          "j",
-          "x",
-          "y"
-        ]
-      }
-    ],
     "no-irregular-whitespace": 2,
     "no-whitespace-before-property": 2,
     "template-curly-spacing": 2,
