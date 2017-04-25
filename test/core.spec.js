@@ -26,4 +26,16 @@ describe("Matrix", () => {
 
         expect(mat.get(1, 1)).to.be.equal(20);
     });
+
+    it("should return a transposed matrix", () => {
+        const mat = new Matrix(3, 4);
+        mat.set(2, 1, 101);
+
+        const transposed = mat.t();
+
+        expect(transposed.colCount).to.be.equal(4);
+        expect(transposed.rowCount).to.be.equal(3);
+        expect(transposed.get(1, 2)).to.be.equal(101);
+        expect(transposed.get(2, 1)).not.to.be.equal(101);
+    });
 });
