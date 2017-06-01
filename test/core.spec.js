@@ -32,7 +32,6 @@ describe("Matrix", () => {
         expect(mat1.getRow(1)).to.be.eql(new Float64Array([3, 4]));
     });
 
-
     it("should set value of given location", () => {
         const mat = new Matrix(3, 4);
 
