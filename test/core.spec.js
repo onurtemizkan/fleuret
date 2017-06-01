@@ -18,6 +18,20 @@ describe("Matrix", () => {
         expect(mat.get(1, 1)).to.be.equal(0);
     });
 
+    it("should get data of given row", () => {
+        const mat0 = new Matrix(3, 4);
+        expect(mat0.getRow(0)).to.be.eql(new Float64Array([0, 0, 0, 0]));
+
+        const mat1 = new Matrix(2, 2);
+        mat1.set(0, 0, 1);
+        mat1.set(1, 0, 2);
+        mat1.set(0, 1, 3);
+        mat1.set(1, 1, 4);
+
+        expect(mat1.getRow(0)).to.be.eql(new Float64Array([1, 2]));
+        expect(mat1.getRow(1)).to.be.eql(new Float64Array([3, 4]));
+    });
+
 
     it("should set value of given location", () => {
         const mat = new Matrix(3, 4);
