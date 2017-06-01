@@ -38,4 +38,24 @@ describe("Matrix", () => {
         expect(transposed.get(1, 2)).to.be.equal(101);
         expect(transposed.get(2, 1)).not.to.be.equal(101);
     });
+
+    it("should make dot product with another matrix", () => {
+        const mat = new Matrix(3, 4);
+        mat.set(0, 0, 101);
+
+        const mat2 = new Matrix(4, 3);
+        mat2.set(0, 0, 10);
+
+        expect(mat.dot(mat2)).to.be.equal(1010);
+    });
+
+    it("should not make dot product with a matrix with incompatible dimensions", () => {
+        const mat = new Matrix(3, 4);
+        mat.set(0, 0, 101);
+
+        const mat2 = new Matrix(4, 4);
+        mat2.set(0, 0, 10);
+
+        expect(mat.dot.bind(this, mat2)).to.throw();
+    });
 });
