@@ -135,6 +135,31 @@ describe("Matrix", () => {
         });
     });
 
+    describe("flatten method", () => {
+        it("should return row-major flattened copy of matrix", () => {
+            const mat = new Matrix({ data: [[1, 2], [3, 4]], type: "uint8_t" });
+            const expected = new Matrix({ data: [1, 2, 3, 4], type: "uint8_t" });
+
+            expect(mat.flatten()).to.be.eql(expected);
+            expect(mat.data.byteLength).to.be.equal(expected.data.byteLength);
+        });
+
+        it("should return self when self is a vector", () => {
+            const mat = new Matrix({ data: [1, 2, 3, 4], type: "uint8_t" });
+            const expected = new Matrix({ data: [1, 2, 3, 4], type: "uint8_t" });
+
+            expect(mat.flatten()).to.be.eql(expected);
+            expect(mat.data.byteLength).to.be.equal(expected.data.byteLength);
+        });
+
+        it("should return self when self is 1x1", () => {
+            const mat = new Matrix({ data: [1], type: "uint8_t" });
+            const expected = new Matrix({ data: [1], type: "uint8_t" });
+
+            expect(mat.flatten()).to.be.eql(expected);
+            expect(mat.data.byteLength).to.be.equal(expected.data.byteLength);
+        });
+    });
 
     describe("dot method", () => {
         it("should make dot product with another matrix", () => {
