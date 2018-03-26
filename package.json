@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive",
+    "test": "yarn lint && istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive",
     "lint": "./node_modules/eslint/bin/eslint.js ./ --ignore-path .gitignore",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
