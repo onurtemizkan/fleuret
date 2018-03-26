@@ -8,7 +8,7 @@ describe("Matrix", () => {
         const mat = new Matrix({ dimX: 2, dimY: 2 });
 
         expect(mat.data).to.be.instanceOf(Float64Array);
-        expect(Object.values(mat.data)).to.be.eql([0, 0, 0, 0]);
+        expect(Object.keys(mat.data).map(e => mat.data[e])).to.be.eql([0, 0, 0, 0]);
         expect(mat.rowCount).to.be.equal(2);
         expect(mat.colCount).to.be.equal(2);
 
