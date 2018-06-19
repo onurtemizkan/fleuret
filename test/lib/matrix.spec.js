@@ -1,7 +1,6 @@
 const { expect } = require("chai");
-const path = require("path");
 
-const Matrix = require(path.join(__dirname, "../..", "index.js"));
+const Matrix = require("../../lib/matrix.js");
 
 describe("Matrix", () => {
     it("should be constructed correctly", () => {

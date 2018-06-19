@@ -1,3 +1,3 @@
-const Matrix = require("./lib/core.js");
+const fleuret = require("./lib/fleuret.js");
 
-module.exports = Matrix;
+exports = fleuret;
