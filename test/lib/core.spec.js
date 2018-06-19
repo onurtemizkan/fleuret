@@ -221,4 +221,12 @@ describe("Matrix", () => {
             expect(matrix.isScalar()).to.be.equal(false);
         });
     });
+
+    describe("shape method", () => {
+        it("should return correct dimesions of Matrix", () => {
+            const matrix = new Matrix({ dimX: 3, dimY: 4 });
+
+            expect(matrix.shape()).to.be.eql([4, 3]);
+        });
+    });
 });
