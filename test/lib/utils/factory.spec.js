@@ -11,6 +11,13 @@ describe("matrixFactory", () => {
         expect(matrixFactory("uint32_t")).to.be.eql(Uint32Array);
         expect(matrixFactory("float")).to.be.eql(Float32Array);
         expect(matrixFactory("double")).to.be.eql(Float64Array);
+    });
+
+    it("should return Float64Array when C-type string argument is not given", () => {
+        expect(matrixFactory()).to.be.eql(Float64Array);
+    });
+
+    it("should return Float64Array when C-type string argument is not valid", () => {
         expect(matrixFactory("holaaaaa")).to.be.eql(Float64Array);
         expect(matrixFactory("123")).to.be.eql(Float64Array);
     });

@@ -21,4 +21,3 @@ console.log(mat.get(1, 1)) // -> 0
 mat.set(1, 1, 2) // This will set 2 into matrix's (1, 1)th element
 console.log(mat.get(1, 1)) // -> 2
 ```
-
