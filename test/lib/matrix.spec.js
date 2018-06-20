@@ -241,6 +241,76 @@ describe("Matrix", () => {
         });
     });
 
+    describe("isIdentity method", () => {
+        it("should return true if the Matrix is 1x1 identity", () => {
+            const matrix = new Matrix({ data: [1] });
+
+            expect(matrix.isIdentity()).to.be.equal(true);
+        });
+
+        it("should return true if the Matrix is 2x2 identity", () => {
+            const matrix = new Matrix({ data: [[1, 0], [0, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(true);
+        });
+
+        it("should return true if the Matrix is 3x3 identity", () => {
+            const matrix = new Matrix({ data: [[1, 0, 0], [0, 1, 0], [0, 0, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(true);
+        });
+
+        it("should return false if the Matrix is row vector", () => {
+            const matrix = new Matrix({ data: [[2, 5]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+
+        it("should return false if the Matrix is column vector", () => {
+            const matrix = new Matrix({ data: [[3], [5]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+
+        it("should return false if the matrix is 1x1 non-identity", () => {
+            const matrix = new Matrix({ data: [0] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+
+        });
+
+        it("should return false if the matrix is 2x2 non-identity - 1", () => {
+            const matrix = new Matrix({ data: [[0, 1], [0, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+
+        });
+
+        it("should return false if the matrix is 2x2 non-identity - 2", () => {
+            const matrix = new Matrix({ data: [[1, 1], [1, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+
+        it("should return false if the matrix is 2x2 non-identity - 3", () => {
+            const matrix = new Matrix({ data: [[1, 0], [1, 9]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+
+        it("should return false if the matrix is 3x3 non-identity - 1", () => {
+            const matrix = new Matrix({ data: [[1, 0, 0], [1, 1, 9], [0, 0, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+
+        it("should return false if the matrix is 3x3 non-identity - 2", () => {
+            const matrix = new Matrix({ data: [[1, 1, 1], [1, 1, 1], [0, 1, 1]] });
+
+            expect(matrix.isIdentity()).to.be.equal(false);
+        });
+    });
+
     describe("shape method", () => {
         it("should return correct dimesions of Matrix", () => {
             const matrix = new Matrix({ dimX: 3, dimY: 4 });
