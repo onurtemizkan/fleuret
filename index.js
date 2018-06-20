@@ -1,3 +1,3 @@
 const fleuret = require("./lib/fleuret.js");
 
-exports = fleuret;
+module.exports = fleuret;
