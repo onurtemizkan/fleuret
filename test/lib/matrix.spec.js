@@ -23,14 +23,14 @@ describe("Matrix", () => {
         }
     });
 
-    describe("get method", () => {
+    describe("`get` method", () => {
         it("should get value of given location", () => {
             const mat = new Matrix({ dimX: 3, dimY: 4 });
             expect(mat.get(1, 1)).to.be.equal(0);
         });
     });
 
-    describe("getRow method", () => {
+    describe("`getRow` method", () => {
         it("should get data of given row", () => {
             const mat0 = new Matrix({ dimX: 3, dimY: 4 });
             expect(mat0.getRow(0)).to.be.eql(new Float64Array([0, 0, 0]));
@@ -46,7 +46,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("set method", () => {
+    describe("`set` method", () => {
         it("should set value of given location", () => {
             const mat = new Matrix({ dimX: 3, dimY: 4 });
 
@@ -66,7 +66,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("t (transpose) method", () => {
+    describe("`t` (transpose) method", () => {
         it("should transpose a portrait matrix correctly", () => {
             const mat = new Matrix({ dimX: 3, dimY: 4 });
             mat.set(1, 1, 101);
@@ -134,7 +134,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("flatten method", () => {
+    describe("`flatten` method", () => {
         it("should return row-major flattened copy of matrix", () => {
             const mat = new Matrix({ data: [[1, 2], [3, 4]], type: "uint8_t" });
             const expected = new Matrix({ data: [1, 2, 3, 4], type: "uint8_t" });
@@ -160,7 +160,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("dot method", () => {
+    describe("`dot` method", () => {
         it("should make dot product with another matrix", () => {
             const mat1 = new Matrix({ data: [[1, 2], [3, 4]] });
             const mat2 = new Matrix({ data: [[9, 8], [7, 6]] });
@@ -187,7 +187,51 @@ describe("Matrix", () => {
         });
     });
 
-    describe("isVector method", () => {
+    describe("`tril` method", () => {
+        it("should return lower triangle of a scalar correctly", () => {
+            const mat = new Matrix({
+                data: [1],
+            });
+
+            expect(mat.tril()).to.be.eql(mat);
+        });
+
+        it("should return lower triangle of a 2x2 matrix correctly", () => {
+            const mat = new Matrix({
+                data: [[1, 2], [3, 4]],
+            });
+
+            const expected = new Matrix({
+                data: [[1, 0], [3, 4]],
+            });
+
+            expect(mat.tril()).to.be.eql(expected);
+        });
+    });
+
+    describe("`triu` method", () => {
+        it("should return upper triangle of a scalar correctly", () => {
+            const mat = new Matrix({
+                data: [1],
+            });
+
+            expect(mat.triu()).to.be.eql(mat);
+        });
+
+        it("should return upper triangle of a 2x2 matrix correctly", () => {
+            const mat = new Matrix({
+                data: [[1, 2], [3, 4]],
+            });
+
+            const expected = new Matrix({
+                data: [[1, 2], [0, 4]],
+            });
+
+            expect(mat.triu()).to.be.eql(expected);
+        });
+    });
+
+    describe("`isVector` method", () => {
         it("should return true if the Matrix is 1 dimensional", () => {
             const matrix = new Matrix({ data: [2, 3] });
 
@@ -201,7 +245,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("isScalar method", () => {
+    describe("`isScalar` method", () => {
         it("should return true if the Matrix is 1x1", () => {
             const matrix = new Matrix({ data: [2] });
 
@@ -221,7 +265,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("isSquare method", () => {
+    describe("`isSquare` method", () => {
         it("should return true if the Matrix is 1x1", () => {
             const matrix = new Matrix({ data: [2] });
 
@@ -241,7 +285,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("isIdentity method", () => {
+    describe("`isIdentity` method", () => {
         it("should return true if the Matrix is 1x1 identity", () => {
             const matrix = new Matrix({ data: [1] });
 
@@ -311,7 +355,7 @@ describe("Matrix", () => {
         });
     });
 
-    describe("shape method", () => {
+    describe("`shape` method", () => {
         it("should return correct dimesions of Matrix", () => {
             const matrix = new Matrix({ dimX: 3, dimY: 4 });
 
