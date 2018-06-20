@@ -1,7 +1,7 @@
 const { expect } = require("chai");
 const { matrixFactory } = require("../../../lib/utils/factory");
 
-describe("matrixFactory", () => {
+describe("Matrix Factory", () => {
     it("should return correct TypedArray for given C-type string argument", () => {
         expect(matrixFactory("int8_t")).to.be.eql(Int8Array);
         expect(matrixFactory("uint8_t")).to.be.eql(Uint8Array);

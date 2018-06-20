@@ -221,6 +221,26 @@ describe("Matrix", () => {
         });
     });
 
+    describe("isSquare method", () => {
+        it("should return true if the Matrix is 1x1", () => {
+            const matrix = new Matrix({ data: [2] });
+
+            expect(matrix.isSquare()).to.be.equal(true);
+        });
+
+        it("should return false if the Matrix is 1 dimensional", () => {
+            const matrix = new Matrix({ data: [[2, 5]] });
+
+            expect(matrix.isSquare()).to.be.equal(false);
+        });
+
+        it("should return true if the Matrix is 2x2", () => {
+            const matrix = new Matrix({ data: [[2, 3], [4, 5]] });
+
+            expect(matrix.isSquare()).to.be.equal(true);
+        });
+    });
+
     describe("shape method", () => {
         it("should return correct dimesions of Matrix", () => {
             const matrix = new Matrix({ dimX: 3, dimY: 4 });
