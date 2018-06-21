@@ -231,6 +231,48 @@ describe("Matrix", () => {
         });
     });
 
+    describe("`diag` method", () => {
+        it("should return the diagonal array of a scalar", () => {
+            const mat = new Matrix({
+                data: [1],
+            });
+
+            expect(mat.diag()).to.be.eql(new Float64Array([1]));
+        });
+
+        it("should return the diagonal array of a 2x2 matrix", () => {
+            const mat = new Matrix({
+                data: [[1, 2], [3, 4]],
+            });
+
+            expect(mat.diag()).to.be.eql(new Float64Array([1, 4]));
+        });
+
+        it("should return the diagonal array of a 3x3 matrix", () => {
+            const mat = new Matrix({
+                data: [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+            });
+
+            expect(mat.diag()).to.be.eql(new Float64Array([1, 5, 9]));
+        });
+
+        it("should throw an exception if the matrix is a vector", () => {
+            const mat = new Matrix({
+                data: [1, 2],
+            });
+
+            expect(mat.diag.bind(mat)).to.throw(Error, "This matrix is not a square matrix.");
+        });
+
+        it("should throw an exception if the matrix is non-square", () => {
+            const mat = new Matrix({
+                data: [[1, 2], [3, 4], [5, 6]],
+            });
+
+            expect(mat.diag.bind(mat)).to.throw(Error, "This matrix is not a square matrix.");
+        });
+    });
+
     describe("`isVector` method", () => {
         it("should return true if the Matrix is 1 dimensional", () => {
             const matrix = new Matrix({ data: [2, 3] });
