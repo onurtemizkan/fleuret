@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-const Matrix = require("../../lib/matrix.js");
+const Matrix = require("../../lib/core/matrix");
 
 describe("Matrix", () => {
     it("should be constructed correctly", () => {

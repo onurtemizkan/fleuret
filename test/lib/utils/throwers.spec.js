@@ -3,7 +3,7 @@ const {
     throwIfDimensionsMismatch,
     throwIfNotSquare,
 } = require("../../../lib/utils/throwers");
-const Matrix = require("../../../lib/matrix.js");
+const Matrix = require("../../../lib/core/matrix");
 
 describe("Thrower functions", () => {
     describe("`throwIfDimensionsMismatch` function", () => {
@@ -36,7 +36,6 @@ describe("Thrower functions", () => {
             expect(throwIfDimensionsMismatch.bind(null, mat1, mat2)).to.throw();
         });
 
-        // !!!!!!!!!!!
         it("should not throw error when both matrices are scalar", () => {
             const mat1 = new Matrix({ data: [1] });
             const mat2 = new Matrix({ data: [8] });
