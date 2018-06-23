@@ -5,7 +5,7 @@ const {
     zeros,
     identity,
     fromArray,
-} = require("../../lib/core/constructors");
+} = require("../../lib/core/methods/constructors");
 
 describe("Matrix / Vector Constructors", () => {
     describe("`full` constructor", () => {
