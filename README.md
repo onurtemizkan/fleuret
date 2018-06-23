@@ -4,20 +4,24 @@
 
 `fleuret` is a simple Matrix class for JavaScript.
 
-## Usage
+## Installation
 
-```javascript
-import Matrix from "fleuret";
+Install fleuret using [`yarn`](https://yarnpkg.com/en/package/fleuret):
 
-// This will create a new 2x3 matrix of zeros
-const mat = new Matrix({ dimX: 2, dimY: 3 });
-
-// Matrix information
-console.log(mat.rowCount)  // -> 3
-console.log(mat.colCount) // -> 2
-
-// Getter/Setter
-console.log(mat.get(1, 1)) // -> 0
-mat.set(1, 1, 2) // This will set 2 into matrix's (1, 1)th element
-console.log(mat.get(1, 1)) // -> 2
+```bash
+yarn add fleuret
 ```
+
+Or via [`npm`](https://www.npmjs.com/):
+
+```bash
+npm install --save fleuret
+```
+
+## Compatibility
+
+The minimum supported Node version is `v6.0.0`.
+
+## Documentation
+
+API Docs can be found in [`here`](https://github.com/onurtemizkan/fleuret/blob/master/DOCUMENTATION.md):
