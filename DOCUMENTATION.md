@@ -21,14 +21,14 @@
 <dd><p>Creates an identity matrix of given size</p>
 </dd>
 <dt><a href="#fromArray">fromArray(array)</a> ⇒ <code><a href="#Matrix">Matrix</a></code></dt>
-<dd><p>Creates a vector or a matrix from the given JavaScript array</p>
+<dd><p>Creates a vector or a matrix from given JavaScript array</p>
 </dd>
 </dl>
 
 <a name="Matrix"></a>
 
 ## Matrix
-**Kind**: global class  
+**Kind**: global class
 
 * [Matrix](#Matrix)
     * [new Matrix(dimX, dimY, type)](#new_Matrix_new)
@@ -69,10 +69,10 @@ Creates an instance of Matrix.
 <a name="Matrix+get"></a>
 
 ### matrix.get(x, y) ⇒ <code>any</code>
-Returns the value of the given location
+Returns the value of given location
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>any</code> - value of the given index  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>any</code> - value of given index
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -87,8 +87,8 @@ Returns the value of the given location
 ### matrix.getRow(x) ⇒ <code>Float64Array</code>
 Returns values of given row
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>Float64Array</code> - A TypedArray containing the values of given row  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>Float64Array</code> - A TypedArray containing the values of given row
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -100,15 +100,15 @@ Returns values of given row
 <a name="Matrix+set"></a>
 
 ### matrix.set(x, y, entry) ⇒ <code>void</code>
-Sets the value of the given location
+Sets the value of given location
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
 
 | Param | Type | Description |
 | --- | --- | --- |
 | x | <code>any</code> | column index |
 | y | <code>any</code> | row index |
-| entry | <code>any</code> | value to set the given index |
+| entry | <code>any</code> | value to set given index |
 
 
 * * *
@@ -118,8 +118,8 @@ Sets the value of the given location
 ### matrix.t() ⇒ [<code>Matrix</code>](#Matrix)
 Returns transposed copy of self
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: [<code>Matrix</code>](#Matrix) - Transposed self  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: [<code>Matrix</code>](#Matrix) - Transposed self
 
 * * *
 
@@ -128,8 +128,8 @@ Returns transposed copy of self
 ### matrix.flatten() ⇒ [<code>Matrix</code>](#Matrix)
 Returns row-major flattened version of self
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: [<code>Matrix</code>](#Matrix) - row-major flattened copy of self  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: [<code>Matrix</code>](#Matrix) - row-major flattened copy of self
 
 * * *
 
@@ -138,8 +138,8 @@ Returns row-major flattened version of self
 ### matrix.dot(other) ⇒ <code>Number</code>
 Returns dot product of self with given matrix
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>Number</code> - Dot product with `other`  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>Number</code> - Dot product with `other`
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -153,8 +153,8 @@ Returns dot product of self with given matrix
 ### matrix.shape() ⇒ <code>array</code>
 Returns the shape of the array as an array of dimensions
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>array</code> - Tuple of rowCount and colCount  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>array</code> - Tuple of rowCount and colCount
 
 * * *
 
@@ -163,8 +163,8 @@ Returns the shape of the array as an array of dimensions
 ### matrix.tril() ⇒ [<code>Matrix</code>](#Matrix)
 Returns lower triangle of the matrix
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: [<code>Matrix</code>](#Matrix) - Lower triangle of self  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: [<code>Matrix</code>](#Matrix) - Lower triangle of self
 
 * * *
 
@@ -173,8 +173,8 @@ Returns lower triangle of the matrix
 ### matrix.triu() ⇒ [<code>Matrix</code>](#Matrix)
 Returns upper triangle of the matrix
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: [<code>Matrix</code>](#Matrix) - Lower triangle of self  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: [<code>Matrix</code>](#Matrix) - Lower triangle of self
 
 * * *
 
@@ -183,8 +183,8 @@ Returns upper triangle of the matrix
 ### matrix.diag() ⇒ <code>array</code>
 Extract diagonal of self
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>array</code> - Diagonal array of self  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>array</code> - Diagonal array of self
 
 * * *
 
@@ -193,7 +193,7 @@ Extract diagonal of self
 ### matrix.print() ⇒ <code>void</code>
 Prints the text representation of self to console
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
 
 * * *
 
@@ -202,8 +202,8 @@ Prints the text representation of self to console
 ### matrix.isVector(mat) ⇒ <code>boolean</code>
 Returns whether the matrix is 1D
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>boolean</code> - True if the matrix is 1D  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>boolean</code> - True if the matrix is 1D
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -217,8 +217,8 @@ Returns whether the matrix is 1D
 ### matrix.isScalar(mat) ⇒ <code>boolean</code>
 Returns whether the matrix is 1x1
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>boolean</code> - True if matrix is 1x1  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>boolean</code> - True if matrix is 1x1
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -232,8 +232,8 @@ Returns whether the matrix is 1x1
 ### matrix.isSquare(mat) ⇒ <code>boolean</code>
 Returns whether the matrix is a square matrix
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>boolean</code> - True if matrix is square  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>boolean</code> - True if matrix is square
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -247,8 +247,8 @@ Returns whether the matrix is a square matrix
 ### matrix.isIdentity(mat) ⇒ <code>boolean</code>
 Returns whether the matrix is an identity matrix
 
-**Kind**: instance method of [<code>Matrix</code>](#Matrix)  
-**Returns**: <code>boolean</code> - True if the matrix is an identity matrix  
+**Kind**: instance method of [<code>Matrix</code>](#Matrix)
+**Returns**: <code>boolean</code> - True if the matrix is an identity matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -262,8 +262,8 @@ Returns whether the matrix is an identity matrix
 ## full(dimX, dimY, value, type) ⇒ [<code>Matrix</code>](#Matrix)
 Creates a matrix filled with given value
 
-**Kind**: global function  
-**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix  
+**Kind**: global function
+**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -280,8 +280,8 @@ Creates a matrix filled with given value
 ## ones(dimX, dimY, type) ⇒ [<code>Matrix</code>](#Matrix)
 Creates a matrix filled with `1`s
 
-**Kind**: global function  
-**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix  
+**Kind**: global function
+**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -297,8 +297,8 @@ Creates a matrix filled with `1`s
 ## zeros(dimX, dimY, type) ⇒ [<code>Matrix</code>](#Matrix)
 Creates a matrix filled with `0`s
 
-**Kind**: global function  
-**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix  
+**Kind**: global function
+**Returns**: [<code>Matrix</code>](#Matrix) - Created matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -314,8 +314,8 @@ Creates a matrix filled with `0`s
 ## identity(size, type) ⇒ [<code>Matrix</code>](#Matrix)
 Creates an identity matrix of given size
 
-**Kind**: global function  
-**Returns**: [<code>Matrix</code>](#Matrix) - Created identity matrix  
+**Kind**: global function
+**Returns**: [<code>Matrix</code>](#Matrix) - Created identity matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -328,10 +328,10 @@ Creates an identity matrix of given size
 <a name="fromArray"></a>
 
 ## fromArray(array) ⇒ [<code>Matrix</code>](#Matrix)
-Creates a vector or a matrix from the given JavaScript array
+Creates a vector or a matrix from given JavaScript array
 
-**Kind**: global function  
-**Returns**: [<code>Matrix</code>](#Matrix) - Created identity matrix  
+**Kind**: global function
+**Returns**: [<code>Matrix</code>](#Matrix) - Created identity matrix
 
 | Param | Type | Description |
 | --- | --- | --- |
