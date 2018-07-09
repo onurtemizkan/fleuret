@@ -6,7 +6,8 @@
   "scripts": {
     "test": "yarn lint && istanbul cover ./node_modules/mocha/bin/_mocha -- --recursive",
     "lint": "./node_modules/eslint/bin/eslint.js ./ --ignore-path .gitignore",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "document": "jsdoc2md -f ./lib/**/*.js --separators > DOCUMENTATION.md"
   },
   "repository": {
     "type": "git",
