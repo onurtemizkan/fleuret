@@ -27,4 +27,10 @@ The minimum supported Node version is `v6.0.0`.
 API Docs can be found in [`here`](https://github.com/onurtemizkan/fleuret/blob/master/DOCUMENTATION.md)
 
 ## Contributing
+Pull Requests are welcome. To propose changes, use these steps below;
 
+- Fork this repository.
+- Install dependencies with `yarn` or `npm install`.
+- After making changes, run linter with `yarn lint`.
+- Run tests with `yarn test`.
+- Open a Pull Request.
