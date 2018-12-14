@@ -1,8 +1,9 @@
 # fleuret 🤺
 
-[![Build Status](https://travis-ci.com/onurtemizkan/fleuret.svg?token=ePsbwFqUWWxFFqAzXqqt&branch=master)](https://travis-ci.com/onurtemizkan/fleuret)
-
 `fleuret` is a simple Matrix class for JavaScript.
+
+[![Build Status](https://travis-ci.com/onurtemizkan/fleuret.svg?token=ePsbwFqUWWxFFqAzXqqt&branch=master)](https://travis-ci.com/onurtemizkan/fleuret)
+[![npm version](https://badge.fury.io/js/fleuret.svg)](https://www.npmjs.com/package/fleuret)
 
 ## Installation
 
