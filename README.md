@@ -26,7 +26,7 @@ The minimum supported Node version is `v6.0.0`.
 
 ## Documentation
 
-API Docs can be found in [`here`](https://github.com/onurtemizkan/fleuret/blob/master/DOCUMENTATION.md)
+API Docs can be found in [`here`](https://onurtemizkan.github.io/fleuret/DOCUMENTATION)
 
 ## Contributing
 Pull Requests are welcome. To propose changes, use these steps below;
